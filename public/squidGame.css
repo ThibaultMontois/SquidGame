@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,700&display=swap');
+body{
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Chakra Petch', sans-serif;
+    background: black;
+}
+/* -----------------------------------------------------------------window */
+.container {
+    position: relative;
+    box-sizing: border-box;
+}
+
+/*******************************************************************************************************/
+/***************************************** HEADER ******************************************************/
+header {
+position: fixed;
+width: 98%;
+height: 9.5%;
+background: black;
+display: flex;
+justify-content: space-between;
+padding: 0.5% 1% 0 1%;
+z-index: 10;
+}
+
+header div:first-child , header div:last-child{
+   width: 12%;
+} 
+
+header div:last-child{
+    text-align: end;
+}
+
+.logoSmall{
+    width: 70%;
+    visibility: hidden;
+}
+
+/*------------------------------------------------------ nav menu  */
+.elMenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-self: flex-end;
+    width: 60%;
+}
+
+/* -------------------------------------------------------------all buttons */
+.button{
+    background-color: black;
+    border: 0.3rem solid #FD287E;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #FD287E;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.35rem 1.8rem;
+}
+/* ------------------------------------------------------------active to click on the button */
+.button.active{
+    background-color: #FD287E;
+    color: black;
+}
+/* -------------------------------------------------------------start disable  */
+.button.desactive{
+    border: 0.3rem solid #231F20;
+    color: #231F20;
+}
+
+/* ------------------------------------------------------------button rules  */
+.button.btnSmall{
+    /* align-self: flex-start; */
+    font-size: 0.7rem;
+    border: 0.15rem solid #FD287E;
+    padding: 0.3rem 0.9rem;
+}
+
+
+/************************************* FOR FIGHT PAGE ************************************/
+/* ---------------------------------------------------------------characters Fight */
+.containerFight{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    display: none;
+}
+.firstCharacterFight, .secondCharacterFight {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstCharacterFight {
+    align-items: flex-end;
+}
+
+/**************************************************************** Number of Marbles to the fight */
+#numberMarbles{
+    position: absolute;
+    top: 25px;
+    margin-right: 100px;
+    width: 53px;
+    height: auto;
+  
+}
+
+#numberMarbles2{
+    position: absolute;
+    top: 25px;
+    margin-left: 100px;
+    width: 53px;
+    height: auto;
+}
+
+#numberMarbles2,#numberMarbles{
+    border: solid 2px #FD287E;
+    border-radius: 5px;
+    background-color: black;
+    color: #FD287E;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#resultGame{
+    position: absolute;
+    top: 90px;
+    border: 2px solid #FD287E;
+    border-radius: 5px;
+    color: #FD287E;
+    font-weight: bold;
+    background-color:#000000;
+    width: 65px;
+    height: auto;
+}
+
+/* ------------------------------------------------------------------Image Circle characters */
+.imgCircle{
+    width: 74px;
+    height: auto;
+    border-radius: 50%;
+    border: 0.15rem solid #FD287E;
+}
+
+.containerFight>img{
+    width: 5rem;
+    height: auto;
+}
+
+/*****************************************************************************************/
+/*********************************** SIZE AREA *******************************************/
+#sizeArea{
+    position: fixed;
+    width: 100%;
+    top: 10%;
+}
+
+/* Rules */
+.rules{
+    position: absolute;
+    top: 6rem;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+    width: 21%;
+    border: #FD287E solid 2px;
+    border-radius: 6px;
+    background-color: black;
+    color: white;
+    z-index: 10;
+    display: none;
+}
+
+.rules img{
+    width: 100%;
+    height: auto;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+}
+
+.rules p{
+    margin: 20px 40px;
+    text-align: justify;
+}
+
+/************************************* FOR START PAGE ************************************/
+/* Background */
+.logoSquidGame{
+    position:absolute;
+    top: 2rem;
+    left: 10%;
+    width: 80%;
+}
+
+/*---------------------------------------------------- characters container */
+.characters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+
+/* characters input */
+.characters1, .characters2{
+    display: flex;
+    justify-content: center;
+}
+
+.characters input {
+    display: none;
+}
+
+.characters label{
+    width: 200px;
+    height: 200px; 
+    border: 4px solid #231F20;
+    border-radius: 5px;
+    margin: 1%;
+    padding: 0;
+}
+
+.characters input:checked+label {
+    border-color: #FD287E;
+}
+/* ------------------------------------------------------image characters */
+.characters img {
+    width: 200px;
+    height: 200px;
+}
+
+/************************************* FOR FIGHT PAGE ************************************/
+/* Background */
+.ringBoxe {
+    width: 60%;
+    height: auto;
+    margin: 0 20%;
+    display: none;
+}
+
+/* Marbles bags */
+.sacBille1{
+    position: absolute;
+    top: 75%;
+    left: 27%;
+    width: 5%;
+    transform: scaleX(-1);
+    display: none;
+}
+.sacBille2{
+    position: absolute;
+    top: 75%;
+    left: 68%;
+    width: 5%;
+    display: none;
+}
+
+/* -----------------------------------------------------------------Input bet the number marbles */
+#betMarbles{
+    top: 35px;
+    left: 175px;  
+}
+
+#betMarbles2{
+    top: 35px;
+    right:175px;
+}
+
+#betMarbles, #betMarbles2{
+    position: absolute;
+    border: 2px solid #FD287E;
+    border-radius: 5px;
+    color: #FD287E;
+    background-color: black;
+    width: 50px;
+    height: auto;
+    display: none;
+}
+
+/* number of Marbles in the hands */
+#numberMarblesHand2, #numberMarblesHand{
+    position: absolute;
+    border: 2px solid #FD287E;
+    border-radius: 5px;
+    color: #FD287E;
+    background-color: black;
+    width: 70px;
+    height: auto;
+    display: none;
+}
+
+#numberMarblesHand2{
+    top:75px;
+    right: 155px;
+}
+
+#numberMarblesHand{
+    top:75px;
+    left:155px;
+}
+
+/* Marbles Container */
+.charactersMarbles {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 6%;
+    left: 22.5%;
+    width: 55%;
+    display: none;
+}
+
+.marbles1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.marbles2 {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.marbles1 img, .marbles2 img {
+    width: 0.8rem;
+    margin: 0.1rem;
+}
+
+/* main ouverte main fermée  */
+.mainFermee{
+    position: absolute;
+    top: 40%;
+    left: 41%;
+    display: none;
+}
+.mainFermee img{
+    width: 18%;
+    
+}
+.mainOuverte{
+    position: absolute;
+    top: 45%;
+    left: 41%;
+   
+}
+.mainOuverte img{
+    width: 16%;
+    
+}
+
+/* Timer */
+.timer {
+    position: absolute;
+    top: 90%;
+    left: 22%;
+    width: 100px;
+    height: 25px;
+    background-color: black;
+    color: #FD287E;
+    border: 0.15rem solid #FD287E;
+    border-radius: 5px;
+    display: none;
+}
+
+/*****************************************************************************************/
+/************************************* FOR GAME OVER PAGE ********************************/
+.gameOver {
+    position: absolute;
+    top: 300px;
+    margin: auto;
+    left: 39%;
+    text-align: center;
+    display: none;
+}
+.gameOver p{
+    margin: 10px 0;
+    color: #FD287E;
+    font-size: 5rem;
+}

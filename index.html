@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/normalize.min.css">
+    <link rel="stylesheet" href="public/squidGame.min.css">
+    <script type="text/javascript" src="typescript/start.min.js" defer></script>
+    <script type="text/javascript" src="typescript/squidGame.min.js" defer></script>
+    <script type="text/javascript" src="typescript/gameover.min.js" defer></script>
+    <title>SquidGame</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- game start page__________________________________________________________________________________ -->
+        <header>
+            <div>
+                <img class="logoSmall" src="images/Squid-Game-logo.png" alt="Logo small squid game">
+            </div>
+
+            <nav class="elMenu">
+                <button class="button">VERSUS</button>
+                <input type="submit" form="characters" class="button desactive" value="START">
+            </nav>
+            <div class="containerFight">
+                <div class="firstCharacterFight">
+                    <input type="password" id="numberMarbles" placeholder="Marbles ?">
+                    <img class="imgCircle" src="images/characters/Seong_Gi-hun_456_small.jpg"
+                        alt="personnage principal Seong squid game">
+
+                </div>
+                <img src="images/vs/logo_versus-removebg-preview.png" alt="Logo vs pour le combat">
+                <button type="button" id="resultGame">Result</button>
+                <div class="secondCharacterFight">
+                    <input type="password" id="numberMarbles2" placeholder="Marbles ?">
+                    <img class="imgCircle" src="#" alt="personnage secondaire squid game">
+
+                </div>
+            </div>
+            <div>
+                <button class="button btnSmall">RULES</button>
+            </div>
+        </header>
+        <div id="sizeArea" class="playArea">
+            <!-- Rules__________________________________________________________________________________ -->
+            <div class="rules">
+                <img src="images/rules/personnageSquidGame.png" alt="images des personnages squid game">
+                <p>Le but est de deviner si l'autre joueur a un nombre pair ou impair de bille dans la main. Vous devez
+                    miser un nombre de billes de votre choix.</p>
+                <p>Si vous gagnez, vous remportez une partie des billes de l’adversaire correspondant à votre mise. Si
+                    vous perdez, vous devez lui donner une partie des votre. Puis, c'est à l'autre joueur de parier.</p>
+                <p> Le premier qui n’a plus de billes a perdu !</p>
+            </div>
+
+            <!-- For Start Page__________________________________________________________________________________ -->
+            <!-- Background__________________________________________________________________________________ -->
+            <img class="logoSquidGame" src="images/Squid-Game-logo.png" alt="Logo squid game">
+
+            <!-- Characters__________________________________________________________________________________ -->
+            <form id="characters" class="characters" method="get" action="">
+                <div class="characters1">
+                    <input type="radio" name="chkbx_characters" id="radio1">
+                    <label for="radio1">
+                        <img src="images/characters/Oh_Il-nam_001.png" alt="personnage image" />
+                    </label>
+                    <input type="radio" name="chkbx_characters" id="radio2">
+                    <label for="radio2">
+                        <img src="images/characters/Kang_Sae-byeok_067.png" alt="personnage image" />
+                    </label>
+                    <input type="radio" name="chkbx_characters" id="radio3">
+                    <label for="radio3">
+                        <img src="images/characters/Jang_Deok-su_101.png" alt="personnage image" />
+                    </label>
+                </div>
+                <div class="characters2">
+                    <input type="radio" name="chkbx_characters" id="radio4">
+                    <label for="radio4">
+                        <img src="images/characters/Ali_Abdul_199.png" alt="personnage image" />
+                    </label>
+                    <input type="radio" name="chkbx_characters" id="radio5">
+                    <label for="radio5">
+                        <img src="images/characters/Han_Mi-nyeo_212.png" alt="personnage image" />
+                    </label>
+                    <input type="radio" name="chkbx_characters" id="radio6">
+                    <label for="radio6">
+                        <img src="images/characters/Cho_Sang-woo_218.png" alt="personnage image" />
+                    </label>
+                </div>
+            </form>
+
+
+            <!-- For Fight Page__________________________________________________________________________________ -->
+            <!-- Background__________________________________________________________________________________ -->
+            <img class="ringBoxe" src="images/ringBoxing/arene-ring-boxe-projecteurs_34982-163.jpg"
+                alt="Ring de boxe">
+            <img class="sacBille1" src="images/bagOfMarbles/sacDeBilles.png" alt="sac de billes">
+            <img class="sacBille2" src="images/bagOfMarbles/sacDeBilles.png" alt="sac de billes">
+
+            <!-- Marbles__________________________________________________________________________________ -->
+            <input type="text" id="betMarbles" placeholder="Bet ?">
+            <input type="password" id="numberMarblesHand" placeholder="Nbr Marbles">
+            <div class="charactersMarbles">
+                <div class="marbles1">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                    <img src="images/marbles/blue_marble.png" alt="Bille du joueur">
+                </div>
+                <div class="marbles2">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                    <img src="#" alt="Bille de l'adversaire">
+                </div>
+            </div>
+            <input type="text" id="betMarbles2">
+            <input type="password" id="numberMarblesHand2">
+            <!-- Hands__________________________________________________________________________________ -->
+            <div class="mainFermee">
+                <img src="images/hands/mainFermeGauche.png" alt="Main fermée gauche">
+                <img src="images/hands/mainFermeDroite.png" alt="Main fermée droite">
+            </div>
+            <div class="mainOuverte">
+                <img src="images/hands/mainOuverteGauche.png" alt="Main ouverte gauche">
+                <img src="images/hands/mainOuverteDroite.png" alt="Main ouverte droite">
+            </div>
+
+            <!-- Timer__________________________________________________________________________________ -->
+            <button class="timer">
+                <span id="minutes">03</span>:<span id="seconds">00</span>
+            </button>
+        </div>
+        <!-- For Game Over Page__________________________________________________________________________________ -->
+        <!-- Game Over Message__________________________________________________________________________________ -->
+        <div class="gameOver">
+            <p>Game Over</p>
+            <a href="index.html"><button class="button">TRY AGAIN ?</button></a>
+        </div>
+        <!-- Audio__________________________________________________________________________________ -->
+        <audio type="audio/mp3" src="musiques/themes/squid_game_theme.mp3"></audio>
+        <audio type="audio/mp3" src="#"></audio>
+    </div>
+</body>
+
+</html>
